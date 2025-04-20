@@ -8,6 +8,9 @@ import folium
 from streamlit.components.v1 import html  # Importar el componente HTML de Streamlit
 
 # Cargar los modelos
+import os
+assert os.path.exists('Modelo_P_h.h5'), "El modelo Modelo_P_h.h5 no existe en la ruta especificada"
+
 modelo_P_h = load_model('Modelo_P_h.h5')
 modelo_P_h.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy', 'mse'])
 
