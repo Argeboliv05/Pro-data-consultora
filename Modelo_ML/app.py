@@ -9,11 +9,14 @@ from streamlit.components.v1 import html  # Importar el componente HTML de Strea
 
 
 # Cargar los modelos
-modelo_P_h = load_model('Modelo_P_h.h5')
-modelo_P_h.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy', 'mse'])
 
 modelo_P_C = load_model('Modelo_P_C.h5')
 modelo_P_C.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy', 'mse'])
+
+modelo_P_h = load_model('Modelo_P_h.h5')
+modelo_P_h.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy', 'mse'])
+
+
 
 # Cargar los datos
 metadatos1 = pd.read_csv('metadatos_ML.csv')
