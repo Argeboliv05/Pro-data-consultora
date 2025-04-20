@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /app/Modelo_ML
 
 # Copia los archivos de la aplicación al contenedor
-COPY Modelo_ML/ /app/
+COPY . /app
 
 # Actualiza pip y setuptools para evitar problemas con dependencias
 RUN pip install --upgrade pip setuptools
