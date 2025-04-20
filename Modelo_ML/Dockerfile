@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Establece el directorio de trabajo
-WORKDIR /app
+WORKDIR /app/Modelo_ML
 
 # Copia los archivos de la aplicación al contenedor
 COPY Modelo_ML/ /app/
